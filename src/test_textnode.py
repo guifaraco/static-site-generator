@@ -78,5 +78,6 @@ class TestTextNodeToHtmlNode(unittest.TestCase):
         self.assertEqual(html_node.value, "")
         self.assertEqual(html_node.props["src"], "https://www.google.com")
         self.assertEqual(html_node.props["alt"], "This is a text node")
+
 if __name__ == "__main__":
     unittest.main()
