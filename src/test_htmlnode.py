@@ -25,9 +25,9 @@ class TestHTMLNode(unittest.TestCase):
         self.assertEqual(node.props, None)
 
     def test_leaf_to_html(self):
-        node = LeafNode(tag="div", value="Hello World")
+        node = LeafNode("div", "Hello World")
         self.assertEqual(node.to_html(), "<div>Hello World</div>")
-        node = LeafNode(tag="div", value=None)
+        node = LeafNode("div", None)
         self.assertRaises(ValueError, node.to_html)
 
     def test_to_html_with_children(self):
