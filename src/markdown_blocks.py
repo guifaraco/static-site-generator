@@ -124,10 +124,10 @@ def unordered_list_to_html_node(block):
     items = block.split("\n")
     html_items = []
     for item in items:
-        text = item[3:]
+        text = item[2:]
         children = text_to_children(text)
         html_items.append(ParentNode("li", children))
-    return ParentNode("ol", html_items)
+    return ParentNode("ul", html_items)
 
 def ordered_list_to_html_node(block):
     items = block.split("\n")
